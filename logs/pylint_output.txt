@@ -1,0 +1,6 @@
+************* Module index
+index.py:10:0: W0611: Unused import os (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

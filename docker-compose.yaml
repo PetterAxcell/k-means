@@ -1,10 +1,15 @@
-version: '3.0'
+version: '3.1'
 services:
   k-means:
     env_file: .env
     volumes:
-        - ./logs/:/app/logs/
+        - ./logs/:/app/logs/:rw
     build:
       dockerfile: Dockerfile
     restart: on-failure
     container_name: k-means
+    # command: 
+    #   - /bin/sh
+    #   - -c
+    #   - "python index.py"
+      # - "pylint /app/index.py > /app/logs/pylint_output.txt"
