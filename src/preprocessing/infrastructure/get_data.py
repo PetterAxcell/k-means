@@ -1,7 +1,6 @@
 import pandas as pd
 class GetData():
     def __init__(self, filename):
-        print('getData')
         self.filename = filename
 
     def read_data(self, filetype):

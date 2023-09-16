@@ -8,6 +8,7 @@
         * main - Entrypoint of the project
 '''
 import os
+import unittest
 from test.entry_test import EntryTest
 from src.preprocessing.infrastructure.get_data import GetData
 
@@ -17,7 +18,10 @@ def main():
         Entrypoint
     '''
     if TEST_FLAG:
-        test_result = EntryTest().get_results()
+        loader = unittest.TestLoader()
+        suite = loader.loadTestsFromModule(EntryTest)
+        unittest.TextTestRunner().run(suite)
+        #test_result = EntryTest().get_results()
     else:
         print(GetData(os.getenv('FILENAME')).read_data('csv'))
 
