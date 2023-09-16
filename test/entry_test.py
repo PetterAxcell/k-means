@@ -15,3 +15,4 @@ class EntryTest():
     def get_results(self):
         self.make_tests()
         return self.errors
+    

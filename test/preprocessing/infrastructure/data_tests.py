@@ -9,3 +9,4 @@ class DataTests():
         if self.check_csv:
             total = self.test_csv_functions.make_test()
         return total
+    
