@@ -18,8 +18,10 @@ def main():
         Entrypoint
     '''
     if TEST_FLAG:
+        print('here')
         loader = unittest.TestLoader()
-        suite = loader.loadTestsFromModule(EntryTest)
+        suite = loader.loadTestsFromTestCase(EntryTest)
+        print(suite)
         unittest.TextTestRunner().run(suite)
         #test_result = EntryTest().get_results()
     else:

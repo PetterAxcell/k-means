@@ -3,9 +3,9 @@
 '''
 import unittest
 class EntryTest(unittest.TestCase):
-    def __init__(self):
-        super().__init__()
-    
     def test_make(self):
+        print('here2')
         self.assertEqual(0, 1)
-    
+
+if __name__ == "__main__":
+    unittest.main()
