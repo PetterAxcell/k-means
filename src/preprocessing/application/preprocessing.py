@@ -1,3 +1,5 @@
+import os
+import pandas as pd
 from src.preprocessing.infrastructure.get_data import GetData
 FILENAME = str(os.getenv('FILENAME'))
 KIND_FILE = str(os.getenv('KIND_FILE'))

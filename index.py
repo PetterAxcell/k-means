@@ -19,6 +19,7 @@ def main():
     '''
     if TEST_FLAG:
         test_result = EntryTest().test_all()
+        print(test_result)
     else:
         print(GetData(os.getenv('FILENAME')).read_data('csv'))
 

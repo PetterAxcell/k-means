@@ -19,7 +19,8 @@ class EntryTest():
         '''
         if bool(int(os.getenv('PREPROCESSING_TEST'))):
             result_preprocessing_test = self.class_data_test.test_all()
-            [self.number_test, self.number_fails] += result_preprocessing_test
+            self.number_test += result_preprocessing_test[0]
+            self.number_fails += result_preprocessing_test[1]
         
         return [self.number_test, self.number_fails]
 

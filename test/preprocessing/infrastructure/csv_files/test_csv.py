@@ -1,7 +1,6 @@
 import os
 import pandas as pd
 from src.preprocessing.infrastructure.get_data import GetData
-from test.preprocessing.infrastructure.data_tests import DataTests
 class TestCsv():
     def __init__(self) -> None:
         self.GetDataFunctionRight = GetData(os.getenv('FILENAME'))
