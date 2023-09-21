@@ -18,12 +18,7 @@ def main():
         Entrypoint
     '''
     if TEST_FLAG:
-        print('here')
-        loader = unittest.TestLoader()
-        suite = loader.loadTestsFromTestCase(EntryTest)
-        print(suite)
-        unittest.TextTestRunner().run(suite)
-        #test_result = EntryTest().get_results()
+        test_result = EntryTest().test_all()
     else:
         print(GetData(os.getenv('FILENAME')).read_data('csv'))
 
